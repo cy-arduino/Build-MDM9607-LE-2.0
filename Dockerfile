@@ -1,4 +1,4 @@
-# create a keras running env
+# Build MDM9607 LE 2.0
 
 # usage:
 #	cmd line
