@@ -13,7 +13,7 @@ LABEL version="0.1"
 LABEL description="Build MDM9607 LE 2.0"
 
 # Install required packages
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential chrpath coreutils cvs desktop-file-utils diffstat docbook-utils fakeroot g++ gawk gcc git git-core help2man libgmp3-dev libmpfr-dev libreadline6-dev libtool libxml2-dev make python-pip python-pysqlite2 quilt sed subversion texi2html texinfo unzip wget
+RUN apt-get update && apt-get install -y --no-install-recommends ssh vim build-essential chrpath coreutils cvs desktop-file-utils diffstat docbook-utils fakeroot g++ gawk gcc git git-core help2man libgmp3-dev libmpfr-dev libreadline6-dev libtool libxml2-dev make python-pip python-pysqlite2 quilt sed subversion texi2html texinfo unzip wget
 
 RUN rm -rf /var/lib/apt/lists/*
 
