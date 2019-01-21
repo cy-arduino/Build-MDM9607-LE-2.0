@@ -1,15 +1,13 @@
 # Build MDM9607 LE 2.0
 
 # usage:
-#	cmd line
-#		docker run -v [your code path]:/root/data chihyinglin/build_mdm9607_le:x.x [your cmd]
-#	run /root/data/run.sh
-#		docker run -v [your code path]:/root/data chihyinglin/build_mdm9607_le:x.x
+# Use your own env and permission
+#    docker run -it --name build_mdm9607_le-2.0 -v /home/$(whoami):/home/$(whoami) chihyinglin/build-mdm9607-le-2.0 /bin/bash -c "sudo useradd -s /bin/bash -p '' -G sudo $(whoami) && cd /home/$(whoami) && su $(whoami) && /bin/bash"
 
 From ubuntu:14.04
 
 LABEL maintainer="chihying.phone@gmail.com"
-LABEL version="0.1"
+LABEL version="0.2"
 LABEL description="Build MDM9607 LE 2.0"
 
 # Install required packages
@@ -20,6 +18,5 @@ RUN rm -rf /var/lib/apt/lists/*
 # Use bash as default shell
 RUN sudo rm -rf /bin/sh &&  sudo ln -s /bin/bash /bin/sh
 
-
-# run command
-CMD ["/bin/bash", "-c", "/root/data/run.sh"]
+# run default command
+#CMD ["/bin/bash", "-c", "/root/data/run.sh"]
